@@ -1,0 +1,220 @@
+
+.navBar {
+  top: 0;
+  height: 75px; 
+  width: 100%;
+  background-color: #054b8d;
+  position: fixed;
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  padding-left: 25px;
+  flex-grow: 1;
+}
+.logo img {
+  height: 65px;
+  width: 65px;
+  border-radius: 50%;
+}
+
+.navButtons {
+  padding-right: 25px;
+}
+.navButtons button {
+  color: white;
+  padding: 10px 10px;
+  background: none;
+  border: none;
+  font-size: 20px;
+}
+.navButtons button:hover {
+  background: #1c3266;
+}
+
+
+.heroDiv {
+  padding-top: 150px;
+  text-align: center;
+}
+.heroMsg {
+  font-size: 40px;
+  text-decoration: underline;
+}
+.userType {
+  margin-top: 80px;
+  font-size: 30px;
+}
+
+.selection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 10px 50px 50px 50px;
+  padding: 20px;
+}
+
+.librarian {
+  padding: 10px 0px;
+}
+.librarian button {
+  background: orange;
+  padding: 15px 20px;
+  font-size: 25px;
+}
+.librarian button:hover {
+  background: #cf8702;
+}
+
+.borrower {
+  padding: 10px 0px;
+}
+.borrower button {
+  background: salmon;
+  padding: 15px 20px;
+  font-size: 25px;
+}
+.borrower button:hover {
+  background: #d65142;
+}
+
+.login_main {
+  width: 50%;
+  margin: 150px auto 0px auto;
+}
+
+.login_form {
+  text-align: center;
+}
+.login_form h1 {
+  font-size: 40px;
+}
+.login_form input {
+  margin: 5px 0px;
+}
+.login_form button {
+  margin: 5px 0px;
+  width: 100%;
+  padding: 10px;
+  font-size: 18px; 
+}
+
+
+.table_container {
+  width: 85%;
+  margin: 125px auto 0px auto;
+}
+
+.table_container h2 {
+  margin-bottom: 20px;
+}
+
+.table_container td a.edit {
+  cursor: pointer;
+  color: #FFC107;
+}
+
+.table_container td a.delete {
+  cursor: pointer;
+  color: #19b9be;
+}
+
+.table_buttons {
+  text-align: center;
+}
+.table_buttons a:first-child {
+  padding-right: 10%;
+}
+
+
+.editNumCopies input {
+  max-width: 100px;
+}
+
+.submit_bttns {
+  margin: 40px 0px;
+  width: 100%;
+  text-align: center;
+}
+.cancel {
+  padding: 8px 40px;
+  margin-right: 20px;
+  background: #ce0707;
+}
+.cancel:hover {
+  background: #fc0606;
+}
+.update {
+  padding: 8px 40px;
+}
+
+
+
+.borrowerOptions {
+  width: 50%;
+  margin: 125px auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.borrowerCheckout, .borrowerReturn {
+  margin: 40px 0px;
+}
+
+.borrowerCheckout button, .borrowerReturn button {
+  padding: 20px 10px;
+  font-size: 25px;
+  background: salmon;
+}
+.borrowerCheckout button:hover, .borrowerReturn button:hover {
+  background: #d65142;
+}
+
+.return, .checkout {
+  padding: 8px 40px;
+}
+
+.borrower_checkbox {
+  text-align: center;
+}
+
+.borrower_checkbox input {
+  height: 18px;
+  width: 18px;
+}
+
+
+
+.nav-link {
+  border-bottom: 1px solid #4b4b4b;
+  color: white;
+}
+.nav-link:hover {
+  background: black;
+  color: white;
+}
+
+
+.table-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 25px;
+}
+
+.addButton {
+  display: flex;
+  background: green;
+  color: white;
+  border-radius: 50px;
+  font-size: 16px;
+}
+.addButton:hover {
+  background: #01ac01;
+}
+.addButton i {
+  font-size: 21px;
+  padding-right: 5px;
+}

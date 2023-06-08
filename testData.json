@@ -1,0 +1,46 @@
+{
+	"books" : [
+    {
+		"bookId": 1,
+		"bookTitle": "1984",
+		"authorName": "George Orwell",
+		"publisherName": "Penguin"
+		},
+		{
+		"bookId": 2,
+		"bookTitle": "The Theory of Everything",
+		"authorName": "Stephen Hawking",
+		"publisherName": "Scholastic"
+		},
+		{
+		"bookId": 3,
+		"bookTitle": "Dune",
+		"authorName": "Frank Herbert",
+		"publisherName": "Penguin"
+		},
+		{
+		"bookId": 4,
+		"bookTitle": "Ikigai",
+		"authorName": "Hector Garcia",
+		"publisherName": "Penguin"
+		},
+		{
+		"bookId": 5,
+		"bookTitle": "A Short History of the World",
+		"authorName": "H.G Welles",
+		"publisherName": "Fingerprint"
+		},
+		{
+		"bookId": 6,
+		"bookTitle": "The Origin of a Species",
+		"authorName": "Charles Darwin",
+		"publisherName": "Oxford"
+		},
+		{
+		"bookId": 7,
+		"bookTitle": "Ponniyin Selvan",
+		"authorName": "Kalki",
+		"publisherName": "Vikatan"
+		}
+	]
+}

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="../../css/index.css">
+  <link rel="stylesheet" href="../../css/style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+</head>
+
+<body>
+  <div class="navBar">
+    <div class="logo">
+      <a href="../homepage.html">
+        <img src="../../assets/books.jpg" alt="book">
+      </a>
+    </div>
+  </div>
+
+  <div class="table_container table-responsive">
+    <h2>Your Books</h2>
+    <table class="table table-hover table-bordered">
+      <thead>
+        <tr>
+          <th scope="col"></th>
+          <th scope="col">Book Title</th>
+          <th scope="col">Author</th>
+          <th scope="col">Date Out</th>
+          <th scope="col">Due Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      </tbody>
+    </table>
+
+    <div class="submit_bttns">
+      <a href="./borrowerOptions.html">
+        <button class="cancel">Cancel</button>
+      </a>
+      <a href="">
+        <button class="return">Return Selected Books</button>
+      </a>
+    </div>
+  </div>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script>
+    booksData = {
+    "books" : [
+      {
+      "bookId": 1,
+      "bookTitle": "1984",
+      "authorName": "George Orwell",
+      "publisherName": "Penguin"
+      },
+      {
+      "bookId": 2,
+      "bookTitle": "The Theory of Everything",
+      "authorName": "Stephen Hawking",
+      "publisherName": "Scholastic"
+      },
+      {
+      "bookId": 3,
+      "bookTitle": "Dune",
+      "authorName": "Frank Herbert",
+      "publisherName": "Penguin"
+      },
+      {
+      "bookId": 4,
+      "bookTitle": "Ikigai",
+      "authorName": "Hector Garcia",
+      "publisherName": "Penguin"
+      },
+      {
+      "bookId": 5,
+      "bookTitle": "A Short History of the World",
+      "authorName": "H.G Welles",
+      "publisherName": "Fingerprint"
+      },
+      {
+      "bookId": 6,
+      "bookTitle": "The Origin of a Species",
+      "authorName": "Charles Darwin",
+      "publisherName": "Oxford"
+      },
+      {
+      "bookId": 7,
+      "bookTitle": "Ponniyin Selvan",
+      "authorName": "Kalki",
+      "publisherName": "Vikatan"
+      }
+    ]
+  }
+
+var tableBody = document.querySelector('tbody');
+
+for (var i = 0; i < booksData.books.length; i++) {
+  var row = document.createElement('tr');
+
+  var checkboxCell = document.createElement('td');
+  checkboxCell.className = 'borrower_checkbox';
+  var checkboxInput = document.createElement('input');
+  checkboxInput.setAttribute('type', 'checkbox');
+  checkboxCell.appendChild(checkboxInput);
+
+  var titleCell = document.createElement('td');
+  titleCell.textContent = booksData.books[i].bookTitle;
+
+  var authorCell = document.createElement('td');
+  authorCell.textContent = booksData.books[i].authorName;
+
+
+  var dateOutCell = document.createElement('td');
+  dateOutCell.textContent = getRandomDate();
+
+  var dueDateCell = document.createElement('td');
+  dueDateCell.textContent = getDueDate();
+
+  row.appendChild(checkboxCell);
+  row.appendChild(titleCell);
+  row.appendChild(authorCell);
+  row.appendChild(dateOutCell);
+  row.appendChild(dueDateCell);
+
+  tableBody.appendChild(row);
+}
+
+function getRandomDate() {
+  var startDate = new Date(2019, 0, 1); 
+  var endDate = new Date(); 
+  var randomDate = new Date(startDate.getTime() + Math.random() * (endDate.getTime() - startDate.getTime()));
+  return randomDate.toDateString(); 
+}
+
+function getDueDate() {
+  var startDate = new Date(); 
+  var daysToAdd = Math.floor(Math.random() * 15) + 1; 
+  var dueDate = new Date(startDate.getTime() + daysToAdd * 24 * 60 * 60 * 1000);
+  return dueDate.toDateString();
+}
+
+  </script>
+</body>
+
+</html>
